@@ -5,8 +5,14 @@ const mongoose = require('mongoose');
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+// app.use(cors());
+const corsOptions = {
+    origin: 'http://localhost:5173', // Replace with your frontend's URL
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true, // Enable credentials (e.g., cookies)
+};
 
+app.use(cors(corsOptions));
 // Connect to MongoDB
 const MONGO_URI = 'mongodb+srv://joyontokarmakarcse:OIoC2jdtcrX2LzDe@cluster0.sceomgg.mongodb.net/fileData?retryWrites=true&w=majority';
 mongoose.connect(MONGO_URI, {
