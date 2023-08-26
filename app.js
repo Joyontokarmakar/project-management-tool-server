@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(cors());
 
 // Connect to MongoDB
-const MONGO_URI = 'mongodb+srv://joyontokarmakarcse:OIoC2jdtcrX2LzDe@cluster0.sceomgg.mongodb.net/?retryWrites=true&w=majority';
+const MONGO_URI = 'mongodb+srv://joyontokarmakarcse:OIoC2jdtcrX2LzDe@cluster0.sceomgg.mongodb.net/fileData?retryWrites=true&w=majority';
 mongoose.connect(MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
